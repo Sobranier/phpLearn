@@ -6,7 +6,9 @@
 </head>
 <body>
 	<p>
-		<?php echo $output; ?>
+		<?php 
+			include 'test.txt';
+		?>
 	</p>
 </body>
 </html>

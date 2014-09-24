@@ -8,8 +8,14 @@ if (!isset($_REQUEST['firstname'])) {
 		$output = 'Welcome.oh !!!!!!!!!!!!';
 	} else {
 		$output = 'Welcome to our website,'.
-			htmlspecialchars($firstName,ENT_OUOTES,'UTF-8').' '.
+			htmlspecialchars($firstName,ENT_QUOTES,'UTF-8').' '.
 			htmlspecialchars($lastName,ENT_QUOTES,'UTF-8').'!';
 	}
+
+	$file = fopen("test.txt","a");
+	fwrite($file,$output."\n");
+	fclose($file);
+
+
 	include 'welcome.html.php';
 }
